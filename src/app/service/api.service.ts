@@ -4,13 +4,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiserviceService {
-
-  API_URL = 'http://localhost:8080/viagem-api';
+export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getContacts() {
-    return this.httpClient.get('${this.API_URL}/entidade/pesquisar');
+  private base_url: string = 'http://localhost:8080/viagem-api';
+
+  getEntidades() {
+    return this.httpClient.get(this.base_url + '/entidade/pesquisar');
   }
+
 }

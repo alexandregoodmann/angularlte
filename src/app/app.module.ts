@@ -9,6 +9,7 @@ import { AppsettingsComponent } from './components/appsettings/appsettings.compo
 import { ViagemModule } from './viagem/viagem.module';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/app-root', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     BrowserModule,
     ViagemModule,
     MaterialModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
