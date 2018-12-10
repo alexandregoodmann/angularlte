@@ -14,4 +14,8 @@ export class ApiService {
     return this.httpClient.get(this.base_url + '/entidade/pesquisar');
   }
 
+  getFuncionarios(){
+    return this.httpClient.get(this.base_url + '/funcionario');
+  }
+
 }

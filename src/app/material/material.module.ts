@@ -11,6 +11,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
@@ -26,6 +27,8 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatRadioModule,
     MatTableModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [],
   exports: [
@@ -39,6 +42,8 @@ import { MatTableModule } from '@angular/material/table';
     MatButtonModule,
     MatRadioModule,
     MatTableModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class MaterialModule { }

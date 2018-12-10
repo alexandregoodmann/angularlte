@@ -10,6 +10,7 @@ import { ViagemModule } from './viagem/viagem.module';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/app-root', pathMatch: 'full' },

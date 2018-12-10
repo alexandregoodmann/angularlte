@@ -170,3 +170,7 @@ label{
 .mat-radio-label-content{
   margin-right: 15px;
 }
+
+.datatable {
+  width: 100%;
+}
