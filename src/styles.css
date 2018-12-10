@@ -1,1 +1,172 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import url("./assets/font/font-styles.css");
+
+.content {
+  width: 100%;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+label{
+  font-family: 'MyriadPro-Regular' !important;
+}
+
+.mat-raised-button.mat-primary {
+  /*background-color: #008AC9 !important;*/
+  font-family: 'MyriadPro-Regular' !important;
+  font-size: 16px;
+  /*color: white !important;*/
+}
+
+.mat-radio-label{
+  font-family: 'MyriadPro-Regular' !important;
+}
+
+.mat-form-field{
+  font-family: 'MyriadPro-Regular' !important;
+}
+
+.mat-option {
+  font-family: 'MyriadPro-Regular' !important;
+}
+
+.mat-checkbox-label{
+  font-family: 'MyriadPro-Regular' !important;
+}
+
+/* Create four equal columns that floats next to each other */
+.mtb-column {
+    float: left;
+    width: 30%;
+}
+
+.mtb-column-header h3 {
+  font-family: 'MyriadPro-Bold';
+  font-size: 18px;
+  border-bottom: 1.5px solid #008AC9;
+  margin-bottom: 15px;
+  margin-right: 30px;
+}
+
+/* Clear floats */
+.mtb-row:after {
+  background-color: #E5E5E5;
+    content: "";
+    display: table;
+     clear: both;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .mtb-column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .mtb-column {
+        width: 100%;
+    }
+}
+
+.mtb-card {
+    background-color: white;
+    border-radius: 3px;
+    margin: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+  
+  .mtb-card-header {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-top-color: #008AC9;
+    border-top-width: 3px;
+    border-top-style: solid;   
+    padding: 0 10px 0 10px;
+    position: relative;
+    text-size-adjust: 100%;
+  }
+  
+  .mtb-card-header h3 {
+    font-family: 'MyriadPro-Bold';
+    font-size: 24px;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: 10px;
+  }
+  
+  .mtb-card-body{
+    border-top-width: 1.5px;
+    border-bottom-width: 1.5px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(244,244,244);
+    height: auto;
+    padding: 10px;
+  }
+  
+  .mtb-card-footer{
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .mtb-color {
+    background: #008AC9;
+  }
+  
+  .radio-group-column {
+      display: inline-flex;
+      flex-direction: column;
+      width: 100%
+    }
+    
+    .radio-button {
+      margin: 5px;
+    }
+  
+/* =================  INFOBOX =================== */
+.mtb-box {
+  position: relative;
+  height: 90px;
+  border-radius: 4px;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+
+.mtb-box h3{
+  font-family: 'MyriadPro-BoldCond';
+  font-size: 24px;
+}
+
+.mtb-box p {
+  font-family: 'MyriadPro-Cond';
+  font-size: 18px;
+}
+.mtb-icon-wrap {
+  position: relative;
+  display: block;
+  height: 90px;
+  width: 90px;
+  text-align: center;
+  font-size: 45px;
+  float: left;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  margin-right: 10px;
+}
+
+.example-full-width {
+  width: 90%;
+}
+
+.half-width {
+  width: 45%;
+  margin-right: 10px;
+}
+
+.mat-radio-label-content{
+  margin-right: 15px;
+}

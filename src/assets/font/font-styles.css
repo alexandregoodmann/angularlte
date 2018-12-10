@@ -1,0 +1,60 @@
+@font-face {
+font-family: "MyriadPro-Bold";
+src: url("MyriadPro-Bold.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-BoldCond";
+src: url("MyriadPro-BoldCond.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-BoldCondIt";
+src: url("MyriadPro-BoldCondIt.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-BoldIt";
+src: url("MyriadPro-BoldIt.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-Cond";
+src: url("MyriadPro-Cond.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-CondIt";
+src: url("MyriadPro-CondIt.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-It";
+src: url("MyriadPro-It.otf")
+}
+
+@font-face {
+font-family: "myriadpro-lightcond";
+src: url("myriadpro-lightcond.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-Regular";
+src: url("MyriadPro-Regular.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-Semibold";
+src: url("MyriadPro-Semibold.otf")
+}
+
+@font-face {
+font-family: "myriadpro-semiboldcond";
+src: url("myriadpro-semiboldcond.otf")
+}
+
+@font-face {
+font-family: "MyriadPro-SemiboldIt";
+src: url("MyriadPro-SemiboldIt.otf")
+}
+
