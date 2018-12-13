@@ -12,20 +12,26 @@
         <input type="text" placeholder="Informe um cliente ou evento" aria-label="Number" matInput [formControl]="myControl"
           [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete">
-          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-            {{option}}
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option.resumo">
+            {{option.resumo}}
           </mat-option>
         </mat-autocomplete>
       </mat-form-field>
-      
+
       <button mat-stroked-button color="primary" (click)="adicionar()">Adicionar</button>
     </form>
 
-    <app-lista-entidade></app-lista-entidade>
-    <app-lista-funcionario></app-lista-funcionario>
+    <div class="mtb-row">
+      <div class="mtb-column">
+        <app-lista-entidade (enviarEntidades)="enviarEntidades($event)"></app-lista-entidade>
+      </div>
+      <div class="mtb-column">
+        <app-lista-funcionario></app-lista-funcionario>
+      </div>
+    </div>
 
   </div>
-  
+
   <!-- FOOTER -->
   <div class="mtb-card-footer">
     <button mat-raised-button color="primary">Salvar Viagem</button>

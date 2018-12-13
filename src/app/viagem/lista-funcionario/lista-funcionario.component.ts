@@ -21,7 +21,6 @@ export class ListaFuncionarioComponent implements OnInit {
   getFuncionarios() {
     this.apiService.getFuncionarios().subscribe((data: Funcionario[]) => {
       this.funcionarios = data;
-      console.log(data);
     });
   }
 

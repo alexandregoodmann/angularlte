@@ -28,7 +28,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatRadioModule,
     MatTableModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   declarations: [],
   exports: [

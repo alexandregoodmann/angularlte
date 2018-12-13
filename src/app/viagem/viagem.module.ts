@@ -4,13 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { PesquisarComponent } from './pesquisar/pesquisar.component';
 import { ListaFuncionarioComponent } from './lista-funcionario/lista-funcionario.component';
-import { ListaEntidadeComponent } from './lista-entidade/lista-entidade.component';
+import { ListaEntidadeComponent } from './pesquisar/lista-entidade/lista-entidade.component';
 
 const appRoutes: Routes = [
-  { path: 'pesquisar', component: PesquisarComponent},
-  { path: 'funcionarios', component: ListaFuncionarioComponent}
+  { path: 'pesquisar', component: PesquisarComponent },
+  { path: 'funcionarios', component: ListaFuncionarioComponent }
 ];
-
 
 @NgModule({
   imports: [
@@ -18,6 +17,10 @@ const appRoutes: Routes = [
     MaterialModule,
     RouterModule.forRoot(appRoutes)
   ],
-  declarations: [PesquisarComponent, ListaFuncionarioComponent, ListaEntidadeComponent]
+  declarations: [
+    PesquisarComponent,
+    ListaFuncionarioComponent,
+    ListaEntidadeComponent],
+  providers: []
 })
 export class ViagemModule { }

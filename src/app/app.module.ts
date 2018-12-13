@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     AppheaderComponent,
     AppfooterComponent,
     AppmenuComponent,
-    AppsettingsComponent
+    AppsettingsComponent,
   ],
   imports: [
     BrowserModule,
