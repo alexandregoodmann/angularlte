@@ -1,0 +1,20 @@
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th>Evento/Cliente</th>
+      <th>Motivo</th>
+      <th style="width: 40px"></th>
+    </tr>
+    <tr *ngFor="let sel of selecionados">
+      <td>{{sel.resumo}}</td>
+      <td>
+        motivo
+      </td>
+      <td>
+        <button mat-icon-button (click)="remover(sel)">
+          <i class="material-icons">delete_outline</i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -18,4 +18,8 @@ export class ApiService {
     return this.httpClient.get(this.base_url + '/funcionario');
   }
 
+  getMotivos(){
+    return this.httpClient.get(this.base_url + '/motivo');
+  }
+
 }

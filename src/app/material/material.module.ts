@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTableModule } from '@angular/material/table';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatTableModule,
     ReactiveFormsModule,
     FormsModule,
+    MatSnackBarModule
   ],
   declarations: [],
   exports: [
@@ -43,7 +45,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MatRadioModule,
     MatTableModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule
   ]
 })
 export class MaterialModule { }
