@@ -1,74 +1,51 @@
 <div class="mtb-card">
 
   <!-- HEADER -->
-  <div class="mtb-card-header">
+  <div class="mtb-card-header blue">
     <h3>Criar Viagem</h3>
-  </div>
 
-  <!-- BODY -->
-  <div class="mtb-card-body">
-
+    <!-- LINHA DE PESQUISA -->
     <div class="row">
 
-      <!-- ENTIDADE -->
-      <div class="col-lg-5 col-xs-6">
-        <mat-form-field class="example-full-width">
-          <input type="text" placeholder="Informe um cliente ou evento" aria-label="Number" matInput [formControl]="entidadeControl"
-            [matAutocomplete]="autoEntidade">
-          <mat-autocomplete #autoEntidade="matAutocomplete">
-            <mat-option *ngFor="let option of filterEntidade | async" [value]="option.resumo">
-              {{option.resumo}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </div>
+      <form [formGroup]="pesquisarForm" (ngSubmit)="adicionar()">
 
-      <!-- MOTIVO  -->
-      <div class="col-lg-5 col-xs-6">
-        <mat-form-field class="example-full-width">
-          <input type="text" placeholder="Informe um motivo para visitar este cliente ou evento" aria-label="Number"
-            matInput [formControl]="motivoControl" [matAutocomplete]="autoMotivo">
-          <mat-autocomplete #autoMotivo="matAutocomplete">
-            <mat-option *ngFor="let option of filterMotivo | async" [value]="option.motivo">
-              {{option.motivo}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
-      </div>
+        <!-- ENTIDADE -->
+        <div class="col-lg-4 col-xs-4">
+          <mat-form-field class="full-width">
+            <input type="text" placeholder="Informe um cliente ou evento" aria-label="Number" matInput [formControl]="f.entidadeControl"
+              [matAutocomplete]="autoEntidade">
+            <mat-autocomplete #autoEntidade="matAutocomplete">
+              <mat-option *ngFor="let option of filterEntidade | async" [value]="option.resumo">
+                {{option.resumo}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
 
-      <!-- BUTTON -->
-      <div class="col-lg-1 col-xs-6">
-        <button mat-stroked-button color="primary" (click)="adicionar()">Adicionar</button>
-      </div>
+        <!-- MOTIVO  -->
+        <div class="col-lg-4 col-xs-4">
+          <mat-form-field class="full-width">
+            <input type="text" placeholder="Informe um motivo para visitar este cliente ou evento" aria-label="Number"
+              matInput [formControl]="f.motivoControl" [matAutocomplete]="autoMotivo">
+            <mat-autocomplete #autoMotivo="matAutocomplete">
+              <mat-option *ngFor="let option of filterMotivo | async" [value]="option.motivo">
+                {{option.motivo}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </div>
 
+        <!-- BUTTON -->
+        <div class="col-lg-4 col-xs-4">
+          <button mat-stroked-button color="primary" [disabled]="pesquisarForm.invalid">Adicionar</button>
+        </div>
+
+      </form>
     </div>
-
   </div>
-
 
 </div>
 
-<div class="mtb-card">
-
-  <!-- HEADER -->
-  <div class="mtb-card-header">
-  </div>
-
-  <!-- BODY -->
-  <div class="mtb-card-body">
-    <div class="row">
-      <div class="col-lg-6 col-xs-6">
-        <app-lista-entidade></app-lista-entidade>
-      </div>
-      <div class="col-lg-6 col-xs-6">
-        <app-lista-funcionario></app-lista-funcionario>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="mtb-card-footer">
-    <button mat-raised-button color="primary">Salvar Viagem</button>
-  </div>
-
+<div *ngIf="showForm">
+  <app-viagem></app-viagem>
 </div>

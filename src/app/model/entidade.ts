@@ -1,3 +1,5 @@
+import { Motivo } from "./motivo";
+
 export class Entidade {
 
     identidade: number;
@@ -8,5 +10,6 @@ export class Entidade {
     pais: string;
     moeda: string;
     resumo: string;
+    motivo: Motivo;
 
 }
