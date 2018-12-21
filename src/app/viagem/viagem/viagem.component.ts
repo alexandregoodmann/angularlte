@@ -6,6 +6,8 @@ import { Entidade } from 'src/app/model/entidade';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FuncionarioService } from 'src/app/service/funcionario.service';
+import { DateAdapter } from '@angular/material/core';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-viagem',
@@ -17,9 +19,11 @@ export class ViagemComponent implements OnInit {
   funcionarios: Funcionario[] = new Array<Funcionario>();
   selecionados: Entidade[];
   viagemForm: FormGroup;
+  selection = new SelectionModel<Funcionario>(true, []);
 
   constructor(
     public snackBar: MatSnackBar,
+    private adapter: DateAdapter<any>,
     private funcionarioService: FuncionarioService,
     private entidadeService: EntidadeService,
     private formBuilder: FormBuilder) { }
@@ -37,6 +41,7 @@ export class ViagemComponent implements OnInit {
 
   ngOnInit() {
 
+    this.adapter.setLocale('pt');
     this.createFormBuilder();
 
     //funcionarios
@@ -55,15 +60,32 @@ export class ViagemComponent implements OnInit {
   }
 
   salvar() {
-    console.log(this.funcionarios);
+
+    //validar entidade
+    if (this.selecionados.length == 0) {
+      this.snackBar.open('Você precisa escolher ao menos um cliente ou evento', 'Atenção!', {
+        duration: 3000,
+      });
+      return;
+    }
+
+    //validar periodo
+    let saida: Date = this.f.saidaControl.value;
+    let retorno: Date = this.f.retornoControl.value;
+    if (retorno <= saida) {
+      this.snackBar.open('A data de retorno deve ser maior que a data de saída', 'Atenção!', {
+        duration: 3000,
+      });
+      return;
+    }
+
     //validar funcionario selecionado
-    if (this.funcionarios.filter(option => option.selecionado === true).length == 0) {
+    if (this.selection.selected.length == 0) {
       this.snackBar.open('Você precisa selecionar ao menos um funcionário', 'Atenção!', {
         duration: 3000,
       });
       return;
     }
-    alert('agora tu veio')
   }
 
 }
