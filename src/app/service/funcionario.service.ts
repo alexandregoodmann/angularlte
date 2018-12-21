@@ -13,7 +13,6 @@ export class FuncionarioService {
     let funcionarios: Funcionario[] = new Array<Funcionario>();
     this.apiService.getFuncionarios().subscribe((data: Array<Funcionario>) => {
       data.forEach(item => {
-        item.selecionado = null;
         funcionarios.push(item);
       })
     });
